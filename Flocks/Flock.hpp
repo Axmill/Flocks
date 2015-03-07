@@ -17,19 +17,11 @@ public:
 		this->num3 = c;
 	}
 
-	bool checkFlock(Flock)
+	bool checkFlock()
 	{
 		// ab + c^a = (a + b - c) + ac^2 * b
 		bool condition = this->num1 * this->num2 + std::pow(this->num3, this->num1) == (this->num1 + this->num2 - this->num3) + this->num1 * std::pow(this->num3, 2) * this->num2;
-		if (condition == true)
-		{
-			return true;
-		}
-
-		else
-		{
-			return false;
-		}
+		return condition;
 	}
 	
 	Type expand()
