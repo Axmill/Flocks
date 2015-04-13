@@ -20,13 +20,13 @@ public:
 	bool checkFlock()
 	{
 		// ab + c^a = (a + b - c) + ac^2 * b
-		bool condition = this->num1 * this->num2 + std::pow(this->num3, this->num1) == (this->num1 + this->num2 - this->num3) + this->num1 * std::pow(this->num3, 2) * this->num2;
+		bool condition = num1 * num2 + std::pow(num3, num1) == (num1 + num2 - num3) + num1 * std::pow(num3, 2) * num2;
 		return condition;
 	}
 	
 	Type expand()
 	{
-		Type expandedForm = this->num1 * this->num2 * std::pow(this->num3, 2);
+		Type expandedForm = num1 * num2 * std::pow(num3, 2);
 		return expandedForm;
 	}
 
